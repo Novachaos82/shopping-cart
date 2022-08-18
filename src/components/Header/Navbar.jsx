@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 const Navbar = () => {
   return (
-    <div className="bg-slate-400 w-screen p-4 flex justify-between font-mono items-center">
+    <div className="bg-slate-400  p-4 flex justify-between font-mono items-center overflow-x-hidden">
       <Link to="/">
         <h1 className="text-3xl">Home</h1>
       </Link>
