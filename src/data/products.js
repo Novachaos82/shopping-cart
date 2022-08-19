@@ -14,6 +14,8 @@ import keychronK6 from "../images/Keychron-K6-1.jpg";
 import keychronK6Preview from "../images/Keychron-K6-2.jpg";
 import keychronK8 from "../images/Keychron-K8-1.jpg";
 import keychronK8Preview from "../images/Keychron-K8-2.jpg";
+import ryzen7_5800x from "../images/ryzen-7-5800x-1.png";
+import ryzen9_5900x from "../images/ryzen-9-5900x-1.jpg";
 
 const products = [
   {
@@ -78,6 +80,22 @@ const products = [
     price: "100$",
     category: "keyboard",
     image: keychronK8,
+    preview: keychronK8Preview,
+  },
+  {
+    id: 9,
+    name: "Amd r9 5900x",
+    price: "100$",
+    category: "cpu",
+    image: ryzen7_5800x,
+    preview: keychronK8Preview,
+  },
+  {
+    id: 10,
+    name: "Amd r9 5900x",
+    price: "100$",
+    category: "cpu",
+    image: ryzen9_5900x,
     preview: keychronK8Preview,
   },
 ];
