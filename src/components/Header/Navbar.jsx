@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="bg-slate-400  p-4 flex justify-between font-mono items-center overflow-x-hidden">
       <Link to="/">
@@ -17,7 +17,11 @@ const Navbar = () => {
           <li className=" ">Shop</li>
         </Link>
         <li>
-          <BsCart2 />
+          <Link to="/cart">
+            <button>
+              <BsCart2 />
+            </button>
+          </Link>
         </li>
       </ul>
     </div>

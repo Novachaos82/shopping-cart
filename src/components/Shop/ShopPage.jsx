@@ -52,17 +52,16 @@ const ShopPage = () => {
       <div className="flex flex-row  items-start justify-start gap-5 flex-wrap w-3/6">
         {items.map((item) => {
           return (
-            <div
-              key={item.id}
-              className=" bg-gray-200 p-4 rounded-lg drop-shadow-lg h-72"
-            >
+            <div key={item.id}>
               <Link to={`/shop/${item.id}`}>
-                <div>
+                <div className=" bg-gray-200 p-4 rounded-lg drop-shadow-lg h-72">
                   <div>
-                    <img src={item.image} alt={item.id} className="w-52 " />
+                    <div>
+                      <img src={item.image} alt={item.id} className="w-52 " />
+                    </div>
+                    <div>{item.name}</div>
+                    <div>{item.price}</div>
                   </div>
-                  <div>{item.name}</div>
-                  <div>{item.price}</div>
                 </div>
               </Link>
             </div>
