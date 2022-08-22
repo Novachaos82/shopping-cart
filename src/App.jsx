@@ -8,12 +8,13 @@ import { ProductPage } from "./components/Shop/ProductPage";
 import { Cart } from "./components/Shop/cart";
 import { useState } from "react";
 
-function App() {
+const App = () => {
   const [cart, setCart] = useState([]);
-
+  const [quantity, setQuantity] = useState({ present: false, qty: 0 });
   const addToCart = (item) => {
     setCart((prev) => [...prev, item]);
   };
+
   return (
     <Router>
       <div className="App">
@@ -32,6 +33,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-
-const Cart = ({ showCart }) => {
+const Cart = ({ showCart, showQuantity }) => {
   //const location = useLocation();
   //const [storing, setStoring] = useState([]);
 
@@ -12,10 +9,15 @@ const Cart = ({ showCart }) => {
   //const setData = () => {
   //  setStoring((prev) => [...prev, location.state.name]);
   //};
+  //{
+  //  console.log(showQuantity.qty);
+  //}
 
   return (
     <div>
-      <div>oh the cart {showCart}</div>
+      {showCart.map((item, index) => {
+        return <div key={index}>oh the cart {item.name}</div>;
+      })}
     </div>
   );
 };

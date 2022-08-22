@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { products } from "../../data/products";
 
 const ProductPage = ({ addingToCart }) => {
   const { id } = useParams();
-  const navigate = useNavigate();
+
   const [product, setProduct] = useState([]);
   console.log(parseInt(id, 10) + "params");
 
@@ -15,9 +15,7 @@ const ProductPage = ({ addingToCart }) => {
   //  console.log(obj.image);
   //});
   //  console.log(product[0]);
-  const transferingData = () => {
-    navigate("/cart", { state: { id: 1, name: "sabaoon" } });
-  };
+
   const getProductData = () => {
     const newProductArr = products.filter((x) => x.id === parseInt(id, 10));
     setProduct(newProductArr);
@@ -37,7 +35,7 @@ const ProductPage = ({ addingToCart }) => {
                 <div>
                   <button
                     onClick={() => {
-                      addingToCart(obj.name);
+                      addingToCart(obj);
                     }}
                   >
                     Add to Cart
