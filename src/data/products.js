@@ -25,6 +25,7 @@ const products = [
     category: "gpu",
     image: Gpu3060ti,
     preview: Gpu3060tiPreview,
+    qty: 1,
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const products = [
     category: "gpu",
     image: Gpu3070ti,
     preview: Gpu3070tiPreview,
+    qty: 1,
   },
   {
     id: 3,
@@ -41,6 +43,7 @@ const products = [
     category: "gpu",
     image: Gpu3080,
     preview: Gpu3080Preview,
+    qty: 1,
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ const products = [
     category: "gpu",
     image: Gpu3090,
     preview: Gpu3090Preview,
+    qty: 1,
   },
   {
     id: 5,
@@ -57,6 +61,7 @@ const products = [
     category: "keyboard",
     image: duckyMini,
     preview: duckyMiniPreview,
+    qty: 1,
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ const products = [
     category: "keyboard",
     image: keychronK2,
     preview: keychronK2Preview,
+    qty: 1,
   },
   {
     id: 7,
@@ -73,6 +79,7 @@ const products = [
     category: "keyboard",
     image: keychronK6,
     preview: keychronK6Preview,
+    qty: 1,
   },
   {
     id: 8,
@@ -81,6 +88,7 @@ const products = [
     category: "keyboard",
     image: keychronK8,
     preview: keychronK8Preview,
+    qty: 1,
   },
   {
     id: 9,
@@ -89,6 +97,7 @@ const products = [
     category: "cpu",
     image: ryzen7_5800x,
     preview: keychronK8Preview,
+    qty: 1,
   },
   {
     id: 10,
@@ -97,6 +106,7 @@ const products = [
     category: "cpu",
     image: ryzen9_5900x,
     preview: keychronK8Preview,
+    qty: 1,
   },
 ];
 

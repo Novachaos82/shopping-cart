@@ -10,9 +10,24 @@ import { useState } from "react";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState({ present: false, qty: 0 });
+
   const addToCart = (item) => {
-    setCart((prev) => [...prev, item]);
+    const alreadyExist = cart.map((cartItem) => cartItem.id).includes(item.id);
+    console.log(alreadyExist);
+
+    if (alreadyExist) {
+      changeQuantity(item.id, 1);
+    } else {
+      setCart((prev) => [...prev, item]);
+    }
+  };
+
+  const changeQuantity = (id, quantity) => {
+    setCart(
+      cart.map((item) =>
+        item.id === id ? { ...item, qty: item.qty + quantity } : item
+      )
+    );
   };
 
   return (

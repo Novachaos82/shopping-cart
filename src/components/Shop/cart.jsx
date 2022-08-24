@@ -1,4 +1,6 @@
-const Cart = ({ showCart, showQuantity }) => {
+import { useEffect, useState } from "react";
+
+const Cart = ({ showCart, changeQty }) => {
   //const location = useLocation();
   //const [storing, setStoring] = useState([]);
 
@@ -12,11 +14,19 @@ const Cart = ({ showCart, showQuantity }) => {
   //{
   //  console.log(showQuantity.qty);
   //}
+  const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    setCart((prev) => [...prev, showCart]);
+  }, []);
+
+  console.log(cart);
   return (
     <div>
-      {showCart.map((item, index) => {
-        return <div key={index}>oh the cart {item.name}</div>;
+      {cart.map((items) => {
+        return items.map((item, index) => {
+          return <div key={index}>{item.name}</div>;
+        });
       })}
     </div>
   );
