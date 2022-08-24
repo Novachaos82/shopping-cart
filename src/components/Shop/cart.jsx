@@ -25,7 +25,12 @@ const Cart = ({ showCart, changeQty }) => {
     <div>
       {cart.map((items) => {
         return items.map((item, index) => {
-          return <div key={index}>{item.name}</div>;
+          return (
+            <div key={index}>
+              {item.name}
+              {item.qty}
+            </div>
+          );
         });
       })}
     </div>
