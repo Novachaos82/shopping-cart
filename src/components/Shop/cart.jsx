@@ -20,15 +20,22 @@ const Cart = ({ showCart, changeQty }) => {
     setCart((prev) => [...prev, showCart]);
   }, []);
 
-  console.log(cart);
+  const total = cart.map((item) =>
+    item
+      .map((obj) => obj.price * obj.qty)
+      .reduce((acc, prevVal) => acc + prevVal, 0)
+  );
+
   return (
     <div>
       {cart.map((items) => {
         return items.map((item, index) => {
           return (
             <div key={index}>
+              <img src={item.image} alt="" />
               {item.name}
               {item.qty}
+              {total}
             </div>
           );
         });

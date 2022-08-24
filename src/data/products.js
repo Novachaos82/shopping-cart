@@ -21,7 +21,7 @@ const products = [
   {
     id: 1,
     name: "3060ti Graphics Card",
-    price: "100$",
+    price: 100,
     category: "gpu",
     image: Gpu3060ti,
     preview: Gpu3060tiPreview,
@@ -30,7 +30,7 @@ const products = [
   {
     id: 2,
     name: "3070ti Graphics Card",
-    price: "100$",
+    price: 100,
     category: "gpu",
     image: Gpu3070ti,
     preview: Gpu3070tiPreview,
@@ -39,7 +39,7 @@ const products = [
   {
     id: 3,
     name: "3080 Graphics Card",
-    price: "100$",
+    price: 100,
     category: "gpu",
     image: Gpu3080,
     preview: Gpu3080Preview,
@@ -48,7 +48,7 @@ const products = [
   {
     id: 4,
     name: "3090 Graphics Card",
-    price: "100$",
+    price: 100,
     category: "gpu",
     image: Gpu3090,
     preview: Gpu3090Preview,
@@ -57,7 +57,7 @@ const products = [
   {
     id: 5,
     name: "Ducky Mini",
-    price: "100$",
+    price: 100,
     category: "keyboard",
     image: duckyMini,
     preview: duckyMiniPreview,
@@ -66,7 +66,7 @@ const products = [
   {
     id: 6,
     name: "Keychron K2",
-    price: "100$",
+    price: 100,
     category: "keyboard",
     image: keychronK2,
     preview: keychronK2Preview,
@@ -75,7 +75,7 @@ const products = [
   {
     id: 7,
     name: "Keychron K6",
-    price: "100$",
+    price: 100,
     category: "keyboard",
     image: keychronK6,
     preview: keychronK6Preview,
@@ -84,7 +84,7 @@ const products = [
   {
     id: 8,
     name: "Keychron K8",
-    price: "100$",
+    price: 100,
     category: "keyboard",
     image: keychronK8,
     preview: keychronK8Preview,
@@ -93,7 +93,7 @@ const products = [
   {
     id: 9,
     name: "Amd r9 5900x",
-    price: "100$",
+    price: 100,
     category: "cpu",
     image: ryzen7_5800x,
     preview: keychronK8Preview,
@@ -102,7 +102,7 @@ const products = [
   {
     id: 10,
     name: "Amd r9 5900x",
-    price: "100$",
+    price: 100,
     category: "cpu",
     image: ryzen9_5900x,
     preview: keychronK8Preview,
