@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-
-const Cart = ({ showCart, changeQty }) => {
+import { CartItems } from "./cartItems";
+const Cart = ({ showCart, changeQty, deleteItem }) => {
   //const location = useLocation();
   //const [storing, setStoring] = useState([]);
 
@@ -14,21 +13,41 @@ const Cart = ({ showCart, changeQty }) => {
   //{
   //  console.log(showQuantity.qty);
   //}
-  const [cart, setCart] = useState([]);
+  //const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    setCart((prev) => [...prev, showCart]);
-  }, []);
+  //useEffect(() => {
+  //  setCart((prev) => [...prev, showCart]);
+  //}, []);
 
-  const total = cart.map((item) =>
-    item
-      .map((obj) => obj.price * obj.qty)
-      .reduce((acc, prevVal) => acc + prevVal, 0)
-  );
+  const total = showCart
+    .map((item) => item.price * item.qty)
+    .reduce((acc, currValue) => acc + currValue, 0);
+  //{
+  //  {
+  //    showCart.map((item) => {
+  //      console.log(item.id);
+  //    });
+  //  }
+  //}
+
+  const items = showCart.map((items) => (
+    <CartItems
+      key={items.id}
+      {...items}
+      //cartObjects={cart}
+      //id={obj.id}
+      //image={obj.image}
+      //price={obj.price}
+      //name={obj.name}
+      //itemQuanity={obj.qty}
+      changeQty={changeQty}
+      deleteItem={deleteItem}
+    />
+  ));
 
   return (
     <div>
-      {cart.map((items) => {
+      {/*{cart.map((items) => {
         return items.map((item, index) => {
           return (
             <div key={index}>
@@ -39,7 +58,9 @@ const Cart = ({ showCart, changeQty }) => {
             </div>
           );
         });
-      })}
+      })}*/}
+      <div>dawg{items}</div>
+      {total}
     </div>
   );
 };

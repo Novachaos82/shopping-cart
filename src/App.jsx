@@ -22,14 +22,17 @@ const App = () => {
     }
   };
 
-  const changeQuantity = (id, quantity) => {
+  const deleteCartItem = (id) => {
+    let newArr = cart.filter((x) => x.id !== id);
+    setCart(newArr);
+  };
+
+  const changeQuantity = (id, quantity) =>
     setCart(
       cart.map((item) =>
         item.id === id ? { ...item, qty: item.qty + quantity } : item
       )
     );
-  };
-
   return (
     <Router>
       <div className="App">
@@ -43,7 +46,16 @@ const App = () => {
             path="/shop/:id"
             element={<ProductPage addingToCart={addToCart} />}
           />
-          <Route path="/cart" element={<Cart showCart={cart} />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                showCart={cart}
+                changeQty={changeQuantity}
+                deleteItem={deleteCartItem}
+              />
+            }
+          />
         </Routes>
       </div>
     </Router>
