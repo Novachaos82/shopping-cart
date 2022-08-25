@@ -33,10 +33,12 @@ const App = () => {
         item.id === id ? { ...item, qty: item.qty + quantity } : item
       )
     );
+
+  const cartLength = cart.length;
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Navbar cartLen={cartLength} />
 
         <Routes>
           <Route path="/" element={<HomePage />} />

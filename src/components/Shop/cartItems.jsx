@@ -2,6 +2,7 @@ const CartItems = ({ id, image, price, name, qty, changeQty, deleteItem }) => {
   const deleteHandler = () => deleteItem(id);
   const increaseQtyHandler = () => changeQty(id, +1);
   const decreaseQtyHandler = () => changeQty(id, -1);
+
   //{
   //  cartObjects.map((items) => {
   //    items.map((obj) => {
@@ -13,8 +14,10 @@ const CartItems = ({ id, image, price, name, qty, changeQty, deleteItem }) => {
     <div>
       <div>{name}</div>
       <div>{qty}</div>
-      <button onClick={increaseQtyHandler}>increase</button>
-      <button onClick={decreaseQtyHandler}>decrease</button>
+      <button onClick={increaseQtyHandler}>+</button>
+      <button onClick={decreaseQtyHandler} disabled={qty < 2}>
+        -
+      </button>
       <div>
         <button onClick={deleteHandler}>delete</button>
       </div>
