@@ -10,6 +10,7 @@ const ProductPage = ({ addingToCart }) => {
 
   useEffect(() => {
     getProductData();
+    // eslint-disable-next-line
   }, []);
   //product.map((obj) => {
   //  console.log(obj.image);
@@ -23,26 +24,30 @@ const ProductPage = ({ addingToCart }) => {
 
   return (
     <div>
-      nigga u in da product page
       <div>
         {product.map((obj, index) => {
           return (
-            <div key={index}>
-              <div>{obj.name}</div>
-              <img src={obj.image} alt={obj.id} />
+            <div key={index} className="flex flex-row gap-8 items-center">
+              <img
+                className="w-52  object-contain "
+                src={obj.image}
+                alt={obj.id}
+              />
 
               <div id="buttons">
+                <div>{obj.name}</div>
                 <div>
                   <button
                     onClick={() => {
                       addingToCart(obj);
                     }}
+                    className="button"
                   >
                     Add to Cart
                   </button>
                 </div>
                 <div>
-                  <button>Buy now</button>
+                  <button className="button">Buy now</button>
                 </div>
               </div>
             </div>

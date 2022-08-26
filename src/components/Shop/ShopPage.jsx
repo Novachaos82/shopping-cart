@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
 
+//import { ImageToggleOnMouseOver } from "./imageToggleOnMouseOver";
+
 const ShopPage = () => {
   const [items, setItems] = useState([]);
   const [title, setTitle] = useState("All products");
@@ -49,21 +51,31 @@ const ShopPage = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-row  items-start justify-start gap-5 flex-wrap w-3/6">
+      <div className="flex flex-row  items-start justify-start gap-10 flex-wrap w-3/6">
         {items.map((item) => {
           return (
             <div key={item.id}>
-              <Link to={`/shop/${item.id}`}>
-                <div className=" bg-gray-200 p-4 rounded-lg drop-shadow-lg h-72">
+              <div className="">
+                <div>
                   <div>
-                    <div>
-                      <img src={item.image} alt={item.id} className="w-52 " />
-                    </div>
-                    <div>{item.name}</div>
-                    <div>{item.price}</div>
+                    <Link to={`/shop/${item.id}`}>
+                      <div className="w-72 h-72 object-contain flex justify-center bg-gray-100 items-center p-4">
+                        <img src={item.image} alt={item.id} className="" />
+                        {/*<img src={item.preview} alt={item.id} className="" />*/}
+                      </div>
+                    </Link>
+                    {/*<ImageToggleOnMouseOver
+                        primaryImg={item.image}
+                        secondaryImg={item.preview}
+                        alt={item.id}
+                      />*/}
                   </div>
+                  <div className="font-bold text-start text-lg">
+                    <Link to={`/shop/${item.id}`}>{item.name}</Link>
+                  </div>
+                  <div className="text-start text-md">${item.price}</div>
                 </div>
-              </Link>
+              </div>
             </div>
           );
         })}

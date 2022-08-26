@@ -9,3 +9,11 @@
 .icons {
   @apply rounded-full w-20 h-20 bg-white flex justify-center items-center;
 }
+
+.button {
+  @apply rounded-lg bg-blue-200 px-4 w-52 py-2 mb-5;
+}
+
+.quantityButton {
+  @apply bg-gray-300 px-2 w-8 h-6  font-semibold flex justify-center items-center text-center hover:enabled:bg-black hover:enabled:text-white transition-all duration-300;
+}

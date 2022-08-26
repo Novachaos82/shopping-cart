@@ -15,12 +15,12 @@ import keychronK6Preview from "../images/Keychron-K6-2.jpg";
 import keychronK8 from "../images/Keychron-K8-1.jpg";
 import keychronK8Preview from "../images/Keychron-K8-2.jpg";
 import ryzen7_5800x from "../images/ryzen-7-5800x-1.png";
-import ryzen9_5900x from "../images/ryzen-9-5900x-1.jpg";
+import ryzen9_5900x from "../images/png-r9.webp";
 
 const products = [
   {
     id: 1,
-    name: "3060ti Graphics Card",
+    name: " Nvidia RTX 3060ti",
     price: 100,
     category: "gpu",
     image: Gpu3060ti,
@@ -29,7 +29,7 @@ const products = [
   },
   {
     id: 2,
-    name: "3070ti Graphics Card",
+    name: " Nvidia RTX 3070ti",
     price: 100,
     category: "gpu",
     image: Gpu3070ti,
@@ -38,7 +38,7 @@ const products = [
   },
   {
     id: 3,
-    name: "3080 Graphics Card",
+    name: " Nvidia RTX 3080",
     price: 100,
     category: "gpu",
     image: Gpu3080,
@@ -47,7 +47,7 @@ const products = [
   },
   {
     id: 4,
-    name: "3090 Graphics Card",
+    name: " Nvidia RTX 3090",
     price: 100,
     category: "gpu",
     image: Gpu3090,

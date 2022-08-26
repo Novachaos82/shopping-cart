@@ -18,9 +18,13 @@ const Navbar = ({ cartLen }) => {
         </Link>
         <li>
           <Link to="/cart">
-            <button>
-              <BsCart2 />
-              {cartLen}
+            <button className="relative">
+              <div className="">
+                <BsCart2 />
+              </div>
+              <div className="absolute left-3 top-3 text-black bg-white rounded-full w-4 h-4 text-xs">
+                {cartLen}
+              </div>
             </button>
           </Link>
         </li>
