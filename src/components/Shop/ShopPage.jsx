@@ -87,7 +87,7 @@ const ShopPage = () => {
                 <div>
                   <div>
                     <Link to={`/shop/${item.id}`}>
-                      <div className="w-72 h-72 object-contain flex justify-center bg-gray-100 items-center p-4">
+                      <div className="w-72 h-72 object-contain flex justify-center bg-shop-cards items-center p-4">
                         <img src={item.image} alt={item.id} className="" />
                         {/*<img src={item.preview} alt={item.id} className="" />*/}
                       </div>
