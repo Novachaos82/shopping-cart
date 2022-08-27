@@ -29,12 +29,12 @@ const ProductPage = ({ addingToCart }) => {
           return (
             <div key={index} className="flex flex-row gap-8 items-center">
               <img
-                className="w-52  object-contain "
+                className="w-96 h-full object-contain"
                 src={obj.image}
                 alt={obj.id}
               />
 
-              <div id="buttons">
+              <div id="buttons" className="">
                 <div>{obj.name}</div>
                 <div>
                   <button

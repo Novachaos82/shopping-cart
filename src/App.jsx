@@ -36,8 +36,8 @@ const App = () => {
 
   const cartLength = cart.length;
   return (
-    <Router>
-      <div className="bg-grayish">
+    <Router className="bg-grayish">
+      <div>
         <Navbar cartLen={cartLength} />
 
         <Routes>
