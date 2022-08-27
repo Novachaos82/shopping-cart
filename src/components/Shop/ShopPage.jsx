@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { products } from "../../data/products";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 //import { ImageToggleOnMouseOver } from "./imageToggleOnMouseOver";
 
@@ -32,7 +33,27 @@ const ShopPage = () => {
     setTitle(title);
   };
 
+  const animations = {
+    initial: { opacity: 0, x: -150 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { x: { type: "spring", duration: 0.9, bounce: 0.4 } },
+    },
+    exit: {
+      opacity: 0,
+      x: 150,
+      transition: { x: { type: "tween", duration: 0.4, bounce: 0.3 } },
+    },
+  };
+
   return (
+    //<motion.div
+    //  initial={{ opacity: 0, scale: 0.5 }}
+    //  animate={{ opacity: 1, scale: 1 }}
+    //  transition={{ duration: 0.5 }}
+    //>
+
     <div className="flex flex-row mt-12 gap-20">
       <div className="w-2/6 text-right p-4">
         <div>Shop/</div>
@@ -51,7 +72,14 @@ const ShopPage = () => {
           </ul>
         </div>
       </div>
-      <div className="flex flex-row  items-start justify-start gap-10 flex-wrap w-3/6">
+      {/*<div className="flex flex-row  items-start justify-start gap-10 flex-wrap w-3/6">*/}
+      <motion.div
+        variants={animations}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="flex flex-row  items-start justify-start gap-10 flex-wrap w-3/6"
+      >
         {items.map((item) => {
           return (
             <div key={item.id}>
@@ -79,7 +107,8 @@ const ShopPage = () => {
             </div>
           );
         })}
-      </div>
+        {/*</div>*/}
+      </motion.div>
     </div>
   );
 };

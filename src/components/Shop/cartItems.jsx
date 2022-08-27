@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const CartItems = ({ id, image, price, name, qty, changeQty, deleteItem }) => {
   const deleteHandler = () => deleteItem(id);
   const increaseQtyHandler = () => changeQty(id, +1);
@@ -33,12 +35,14 @@ const CartItems = ({ id, image, price, name, qty, changeQty, deleteItem }) => {
           </div>
         </div>
         <div>
-          <button
-            className="border-black border px-6 py-0 hover:bg-red-400 hover:border-red-400 hover:text-white font-semibold drop-shadow-2xl transition-all duration-500"
-            onClick={deleteHandler}
-          >
-            delete
-          </button>
+          <motion.button whileHover={{ scale: 1.0 }} whileTap={{ scale: 0.9 }}>
+            <button
+              className="border-black border px-6 py-0 hover:bg-red-400 hover:border-red-400 hover:text-white font-semibold drop-shadow-2xl transition-all duration-500"
+              onClick={deleteHandler}
+            >
+              delete
+            </button>
+          </motion.button>
         </div>
       </div>
     </div>
