@@ -24,17 +24,17 @@ const ProductPage = ({ addingToCart }) => {
   };
 
   return (
-    <div className="bg-hero-pattern">
-      <div className="flex justify-center h-screen">
+    <div className="">
+      <div className="flex justify-center h-screen ">
         {product.map((obj, index) => {
           return (
             <div
               key={index}
-              className=" bg-black1  flex flex-row gap-8 items-center mt-10 w-3/6 h-5/6"
+              className=" bg-black1  flex flex-row gap-8 items-center mt-10 w-4/6 h-5/6 rounded-lg"
             >
-              <div className="  flex justify-center w-full h-full">
+              <div className=" flex justify-center w-full h-full">
                 <img
-                  className="w-96 h-full object-contain"
+                  className="w-4/6 h-full object-contain"
                   src={obj.image}
                   alt={obj.id}
                 />
@@ -42,17 +42,26 @@ const ProductPage = ({ addingToCart }) => {
 
               <div
                 id="buttons"
-                className="bg-addCart-back flex justify-center w-full h-full text-white items-center"
+                className="bg-black flex justify-center w-full h-full text-white items-center rounded-lg p-8"
               >
                 <div>
-                  <div className="text-xl font-semibold mb-3 text-center">
-                    {obj.name}
+                  <div className="border-b border-gray-500 flex justify-between">
+                    <div className="text-4xl font-semibold mb-3  p-2">
+                      {obj.name}
+                    </div>
+                    <div className=" text-xl p-4">price: ${obj.price}</div>
                   </div>
-                  <div className="text-center">${obj.price}</div>
-                  <div className="mt-10">
+                  <div className=" border-b border-gray-500 p-4">
+                    <div className="font-bold text-xl font-mono  italic">
+                      About
+                    </div>
+                    <div className="font-extralight">{obj.description}</div>
+                  </div>
+
+                  <div className="mt-44 flex flex-col justify-center items-center">
                     <div>
                       <motion.button
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={() => {
                           addingToCart(obj);
@@ -64,7 +73,7 @@ const ProductPage = ({ addingToCart }) => {
                     </div>
                     <div>
                       <motion.button
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.9 }}
                         //transition={{ type: "tween" }}
                         className="button"

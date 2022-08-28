@@ -11,7 +11,7 @@
 }
 
 .button {
-  @apply bg-white border text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-button-hover hover:border-gray-600    hover:text-white drop-shadow-lg;
+  @apply bg-white border text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-black hover:border-white  hover:text-white drop-shadow-lg;
 }
 
 .quantityButton {
@@ -19,5 +19,9 @@
 }
 
 .bg-black1 {
-  @apply bg-black rounded-md bg-clip-padding backdrop-filter-none backdrop-blur-sm bg-opacity-75;
+  @apply bg-gray-300 rounded-md bg-clip-padding backdrop-filter-none backdrop-blur-sm bg-opacity-90;
+}
+
+.checkout-btn {
+  @apply bg-black border text-white border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-green-500 hover:border-white  hover:text-white drop-shadow-lg;
 }

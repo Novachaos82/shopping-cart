@@ -26,6 +26,8 @@ const products = [
     image: Gpu3060ti,
     preview: Gpu3060tiPreview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 2,
@@ -35,6 +37,8 @@ const products = [
     image: Gpu3070ti,
     preview: Gpu3070tiPreview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 3,
@@ -44,6 +48,8 @@ const products = [
     image: Gpu3080,
     preview: Gpu3080Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 4,
@@ -53,6 +59,8 @@ const products = [
     image: Gpu3090,
     preview: Gpu3090Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 5,
@@ -62,6 +70,8 @@ const products = [
     image: duckyMini,
     preview: duckyMiniPreview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 6,
@@ -71,6 +81,8 @@ const products = [
     image: keychronK2,
     preview: keychronK2Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 7,
@@ -80,6 +92,8 @@ const products = [
     image: keychronK6,
     preview: keychronK6Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 8,
@@ -89,15 +103,19 @@ const products = [
     image: keychronK8,
     preview: keychronK8Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 9,
-    name: "Amd r9 5900x",
+    name: "Amd r7 5800x",
     price: 100,
     category: "cpu",
     image: ryzen7_5800x,
     preview: keychronK8Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
   {
     id: 10,
@@ -107,6 +125,8 @@ const products = [
     image: ryzen9_5900x,
     preview: keychronK8Preview,
     qty: 1,
+    description:
+      "lorem  Another productive way to use this tool to begin a daily writing routine. One way is to generate a random paragraph with the intention to try to rewrite it while still keeping the original meaning. The purpose here is to just get . ",
   },
 ];
 

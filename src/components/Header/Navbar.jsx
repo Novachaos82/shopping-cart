@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
 const Navbar = ({ cartLen }) => {
   return (
-    <div className="bg-navbar-color text-white  p-4 flex justify-between font-mono items-center overflow-x-hidden">
+    <div className="bg-navbar-color text-white  p-4 flex justify-between font-sans font-bold items-center overflow-x-hidden">
       <Link to="/">
-        <h1 className="text-3xl">Home</h1>
+        <h1 className="text-3xl tracking-wide">Home</h1>
       </Link>
       <ul className="flex justify-between text-xl text-zinc-700-500 ">
         <Link to="/" className="mr-14">
