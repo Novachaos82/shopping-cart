@@ -4,6 +4,7 @@ import { MdOutlineSettingsInputComponent } from "react-icons/md";
 import { GiComputerFan } from "react-icons/gi";
 import { CgLaptop } from "react-icons/cg";
 import { motion } from "framer-motion";
+import { Footer } from "../Footer/Footer";
 
 const HomePage = () => {
   const cardVariants = {
@@ -76,7 +77,7 @@ const HomePage = () => {
         </p>
         {/*<div id="box" className="flex gap-24 mb-96 mt-12">*/}
         <motion.div
-          className="flex gap-24 mb-96 mt-12"
+          className="flex gap-24 mb-40 mt-12"
           variants={cardVariants}
           initial="offscreen"
           whileInView="onscreen"
@@ -106,6 +107,7 @@ const HomePage = () => {
           {/*</div>*/}
         </motion.div>
       </div>
+      <Footer />
     </motion.div>
   );
 };

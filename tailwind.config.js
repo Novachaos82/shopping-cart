@@ -10,6 +10,7 @@ module.exports = {
         "shop-cards": "#ebecf0",
         "button-hover": "#1a1a1a",
         "addCart-back": "#0f1011",
+        "grayish-black": "#262626",
       },
       backgroundImage: {
         "hero-pattern": "url('/src/images/background.webp')",

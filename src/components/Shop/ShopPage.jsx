@@ -54,7 +54,7 @@ const ShopPage = () => {
     //  transition={{ duration: 0.5 }}
     //>
 
-    <div className="flex flex-row mt-12 gap-20">
+    <div className=" flex flex-row mt-12 gap-20">
       <div className="w-2/6 text-right p-4">
         <div>Shop/</div>
         <div className="text-4xl">{title}</div>

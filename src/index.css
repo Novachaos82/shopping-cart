@@ -11,7 +11,7 @@
 }
 
 .button {
-  @apply bg-white text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-button-hover hover:text-white drop-shadow-lg;
+  @apply bg-white border text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-button-hover hover:border-gray-600    hover:text-white drop-shadow-lg;
 }
 
 .quantityButton {
@@ -19,5 +19,5 @@
 }
 
 .bg-black1 {
-  @apply bg-black rounded-md bg-clip-padding backdrop-filter-none backdrop-blur-sm bg-opacity-70;
+  @apply bg-black rounded-md bg-clip-padding backdrop-filter-none backdrop-blur-sm bg-opacity-75;
 }
