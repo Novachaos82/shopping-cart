@@ -3,7 +3,7 @@ import "./App.css";
 import { Navbar } from "./components/Header/Navbar";
 import { HomePage } from "./components/Home/HomePage";
 import { ShopPage } from "./components/Shop/ShopPage";
-import { AboutPage } from "./components/About/AboutPage";
+
 import { ProductPage } from "./components/Shop/ProductPage";
 import { Cart } from "./components/Shop/cart";
 import { useState } from "react";
@@ -43,7 +43,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/about" element={<AboutPage />} />
+
           <Route
             path="/shop/:id"
             element={<ProductPage addingToCart={addToCart} />}

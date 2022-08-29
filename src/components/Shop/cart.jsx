@@ -1,4 +1,6 @@
 import { CartItems } from "./cartItems";
+import { motion } from "framer-motion";
+
 const Cart = ({ showCart, changeQty, deleteItem }) => {
   const total = showCart
     .map((item) => item.price * item.qty)
@@ -29,12 +31,18 @@ const Cart = ({ showCart, changeQty, deleteItem }) => {
                   <div className="text-center text-2xl mb-2">
                     Total: ${total}
                   </div>
-                  <button className="checkout-btn  rounded-lg">Checkout</button>
+                  <motion.button
+                    className="checkout-btn  rounded-lg"
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    Checkout
+                  </motion.button>
                 </div>
               </div>
             ) : (
               <div className="h-44 flex justify-center items-center font-mono font-bold text-4xl">
-                Cart is empty
+                <div>Cart is empty</div>
               </div>
             )}
           </div>

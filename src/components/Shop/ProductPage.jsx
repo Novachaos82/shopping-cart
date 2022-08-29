@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { products } from "../../data/products";
 import { motion } from "framer-motion";
 
@@ -72,14 +72,19 @@ const ProductPage = ({ addingToCart }) => {
                       </motion.button>
                     </div>
                     <div>
-                      <motion.button
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.9 }}
-                        //transition={{ type: "tween" }}
-                        className="button"
-                      >
-                        Buy now
-                      </motion.button>
+                      <Link to="/cart">
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.9 }}
+                          //transition={{ type: "tween" }}
+                          className="button"
+                          onClick={() => {
+                            addingToCart(obj);
+                          }}
+                        >
+                          Buy now
+                        </motion.button>
+                      </Link>
                     </div>
                   </div>
                 </div>

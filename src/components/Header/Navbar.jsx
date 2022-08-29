@@ -10,9 +10,7 @@ const Navbar = ({ cartLen }) => {
         <Link to="/" className="mr-14">
           <li className=" ">Home</li>
         </Link>
-        <Link to="/about" className="mr-14">
-          <li className=" ">About</li>
-        </Link>
+
         <Link to="/shop" className="mr-14">
           <li className=" ">Shop</li>
         </Link>
