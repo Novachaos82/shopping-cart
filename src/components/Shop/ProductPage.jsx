@@ -24,7 +24,11 @@ const ProductPage = ({ addingToCart }) => {
   };
 
   return (
-    <div className="">
+    <motion.div
+      className=""
+      initial={{ y: 200, opacity: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <div className="flex justify-center h-screen ">
         {product.map((obj, index) => {
           return (
@@ -45,11 +49,14 @@ const ProductPage = ({ addingToCart }) => {
                 className="bg-black flex justify-center w-full h-full text-white items-center rounded-lg p-8"
               >
                 <div>
-                  <div className="border-b border-gray-500 flex justify-between">
-                    <div className="text-4xl font-semibold mb-3  p-2">
+                  <div className="border-b border-gray-500 flex justify-between items-center ">
+                    <div className="text-6xl font-semibold mb-3  p-2">
                       {obj.name}
                     </div>
-                    <div className=" text-xl p-4">price: ${obj.price}</div>
+                    <div className=" text-lg p-4  font-thin">
+                      <span className="font-bold capitalize">price</span>:$
+                      {obj.price}
+                    </div>
                   </div>
                   <div className=" border-b border-gray-500 p-4">
                     <div className="font-bold text-xl font-mono  italic">
@@ -58,7 +65,7 @@ const ProductPage = ({ addingToCart }) => {
                     <div className="font-extralight">{obj.description}</div>
                   </div>
 
-                  <div className="mt-44 flex flex-col justify-center items-center">
+                  <div className="mt-44 flex flex-col justify-center items-center font-mono ">
                     <div>
                       <motion.button
                         whileHover={{ scale: 1.02 }}
@@ -93,7 +100,7 @@ const ProductPage = ({ addingToCart }) => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

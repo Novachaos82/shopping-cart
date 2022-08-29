@@ -11,7 +11,7 @@
 }
 
 .button {
-  @apply bg-white border text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-black hover:border-white  hover:text-white drop-shadow-lg;
+  @apply tracking-wider bg-white border text-black border-black px-4 w-52 py-2 mb-5  font-semibold text-xl hover:bg-black hover:border-white  hover:text-white drop-shadow-lg;
 }
 
 .quantityButton {
