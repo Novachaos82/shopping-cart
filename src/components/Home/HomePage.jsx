@@ -10,7 +10,7 @@ const HomePage = () => {
   const cardVariants = {
     offscreen: {
       opacity: 0,
-      x: -400,
+      x: -200,
     },
     onscreen: {
       opacity: 1,
@@ -18,7 +18,7 @@ const HomePage = () => {
 
       transition: {
         type: "spring",
-        bounce: 0.2,
+        bounce: 0.3,
         duration: 0.8,
       },
     },
@@ -38,15 +38,15 @@ const HomePage = () => {
         default: { ease: "linear" },
       }}
     >
-      <div className="flex flex-row  w-screen " id="header">
-        <div className="w-1/2">
+      <div className="flex flex-col md:flex-row  w-screen " id="header">
+        <div className="w-full md:w-1/2">
           <img src={Home} alt="" className="min-h-full object-cover" />
         </div>
-        <div className="items-start text-left bg-gray-900 text-white flex flex-col justify-center p-8 w-1/2">
+        <div className="w-full items-start text-left bg-gray-900 text-white flex flex-col justify-center p-8 md:w-1/2">
           <h1 className="text-5xl font-sans font-bold mb-20 w-1/2 tracking-wide ">
             Gaming on your hands
           </h1>
-          <p className="mb-20 text-lg">
+          <p className="mb-20 text-lg ">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique
             exercitationem eveniet aperiam. Aspernatur voluptas itaque saepe,
             explicabo exercitationem sunt tenetur dolore adipisci possimus nam
@@ -67,7 +67,7 @@ const HomePage = () => {
        
       >*/}
 
-      <div className="flex flex-col mt-32 justify-center items-center">
+      <div className="flex flex-col mt-32 justify-center items-center px-4">
         <h1 className="text-5xl font-bold ">Our Services</h1>
         <div className="w-24 bg-black border-b-4 border-red-500 mt-6 mb-8"></div>
         <p>
@@ -77,32 +77,34 @@ const HomePage = () => {
         </p>
         {/*<div id="box" className="flex gap-24 mb-96 mt-12">*/}
         <motion.div
-          className="flex gap-24 mb-40 mt-12"
+          className=""
           variants={cardVariants}
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}
         >
-          <div className="boxes">
-            <div className="icons">
-              <MdOutlineSettingsInputComponent size={24} />
+          <div className="p-4 flex gap-24  mb-40 mt-12 flex-wrap justify-center">
+            <div className="boxes">
+              <div className="icons">
+                <MdOutlineSettingsInputComponent size={24} />
+              </div>
+              <h3 className="text-lg font-semibold">Keyboard Customiztion</h3>
+              <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
             </div>
-            <h3 className="text-lg font-semibold">Keyboard Customiztion</h3>
-            <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
-          </div>
-          <div className="boxes">
-            <div className="icons">
-              <GiComputerFan size={24} />
+            <div className="boxes">
+              <div className="icons">
+                <GiComputerFan size={24} />
+              </div>
+              <h3 className="text-lg font-semibold">Maintenance</h3>
+              <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
             </div>
-            <h3 className="text-lg font-semibold">Maintenance</h3>
-            <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
-          </div>
-          <div className="boxes">
-            <div className="icons">
-              <CgLaptop size={24} />
+            <div className="boxes">
+              <div className="icons">
+                <CgLaptop size={24} />
+              </div>
+              <h3 className="text-lg font-semibold">RMA</h3>
+              <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
             </div>
-            <h3 className="text-lg font-semibold">RMA</h3>
-            <p>Narw tbh flannel. Hot lorem gochujangtogen.</p>
           </div>
           {/*</div>*/}
         </motion.div>

@@ -30,16 +30,16 @@ const ProductPage = ({ addingToCart }) => {
       initial={{ y: 200, opacity: 0 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <div className="flex justify-center h-screen ">
+      <div className="flex justify-center min-h-screen ">
         {product.map((obj, index) => {
           return (
             <div
               key={index}
-              className=" bg-black1  flex flex-row gap-8 items-center mt-10 w-4/6 h-5/6 rounded-lg"
+              className=" bg-black1  flex flex-col sm:flex-row  items-center mt-10 mx-16 w-fit sm:w-4/6 mb-20 rounded-lg min-h-fit"
             >
-              <div className=" flex justify-center w-full h-full">
+              <div className=" flex justify-center  w-full h-full">
                 <img
-                  className="w-4/6 h-full object-contain"
+                  className=" min-w-full min-h-full object-contain px-8"
                   src={obj.image}
                   alt={obj.id}
                 />
@@ -47,10 +47,10 @@ const ProductPage = ({ addingToCart }) => {
 
               <div
                 id="buttons"
-                className="bg-black flex justify-center w-full h-full text-white items-center rounded-lg p-8"
+                className="bg-black flex justify-center w-full h-full text-white items-center rounded-lg p-8 "
               >
                 <div>
-                  <div className="border-b border-gray-500 flex justify-between items-center ">
+                  <div className="border-b border-gray-500 flex md:justify-between items-center ">
                     <div className="text-6xl font-semibold mb-3  p-2">
                       {obj.name}
                     </div>

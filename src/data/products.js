@@ -108,7 +108,7 @@ const products = [
   },
   {
     id: 9,
-    name: "Amd r7 5800x",
+    name: "Amd ryzen 7 5800x",
     price: 299,
     category: "cpu",
     image: ryzen7_5800x,
@@ -119,7 +119,7 @@ const products = [
   },
   {
     id: 10,
-    name: "Amd r9 5900x",
+    name: "Amd ryzen 9 5900x",
     price: 399,
     category: "cpu",
     image: ryzen9_5900x,

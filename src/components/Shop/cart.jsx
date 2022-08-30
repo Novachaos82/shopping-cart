@@ -17,8 +17,8 @@ const Cart = ({ showCart, changeQty, deleteItem }) => {
 
   return (
     <div className="bg-gray-200 min-h-screen">
-      <div className="w-full h-fit  flex justify-center ">
-        <div className="  gap-10 bg-white w-2/6 rounded-lg mt-10 mb-10 ">
+      <div className=" h-fit   flex justify-center px-8">
+        <div className="  gap-10 bg-white w-2/6 min-w-fit rounded-lg mt-10 mb-10 ">
           <div className="">
             {items.length > 0 ? (
               <div className=" flex justify-center flex-col items-center">
@@ -41,7 +41,7 @@ const Cart = ({ showCart, changeQty, deleteItem }) => {
                 </div>
               </div>
             ) : (
-              <div className="h-44 flex justify-center items-center font-mono font-bold text-4xl">
+              <div className="h-44 flex justify-center items-center font-mono font-bold text-4xl px-4">
                 <div>Cart is empty</div>
               </div>
             )}

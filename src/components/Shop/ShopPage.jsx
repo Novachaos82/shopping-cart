@@ -54,8 +54,8 @@ const ShopPage = () => {
     //  transition={{ duration: 0.5 }}
     //>
 
-    <div className=" flex flex-row mt-12 gap-20">
-      <div className="w-2/6 text-right p-4">
+    <div className=" sm:flex mt-12 gap-20 justify-center m-auto">
+      <div className="sm:w-2/6 text-right p-4">
         <div>Shop/</div>
         <div className="text-4xl">{title}</div>
         <div className="mt-52 font-semibold text-xl">
@@ -78,7 +78,7 @@ const ShopPage = () => {
         initial="initial"
         animate="animate"
         exit="exit"
-        className="flex flex-row  items-start justify-start gap-10 flex-wrap w-3/6"
+        className="flex flex-row  items-start justify-center sm:justify-start m-auto gap-10 flex-wrap w-3/6"
       >
         {items.map((item) => {
           return (
@@ -87,7 +87,7 @@ const ShopPage = () => {
                 <div>
                   <div>
                     <Link to={`/shop/${item.id}`}>
-                      <div className="w-72 h-72 object-contain flex justify-center bg-shop-cards items-center p-4">
+                      <div className=" w-fit h-fit md:w-72 md:w72 md:h-72 object-contain flex justify-center bg-shop-cards items-center p-4">
                         <img src={item.image} alt={item.id} className="" />
                         {/*<img src={item.preview} alt={item.id} className="" />*/}
                       </div>
