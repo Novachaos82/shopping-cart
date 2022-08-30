@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { products } from "../../data/products";
 import { motion } from "framer-motion";
+import { AiTwotoneStar } from "react-icons/ai";
 
 const ProductPage = ({ addingToCart }) => {
   const { id } = useParams();
@@ -63,6 +64,17 @@ const ProductPage = ({ addingToCart }) => {
                       About
                     </div>
                     <div className="font-extralight">{obj.description}</div>
+                  </div>
+                  <div className="flex flex-row p-4 items-center gap-1">
+                    {[...Array(5)].map((el, index) => (
+                      <p key={index}>
+                        {" "}
+                        <AiTwotoneStar />
+                      </p>
+                    ))}
+                    <span className="font-light ml-2 text-gray-400 font-serif underline text-sm cursor-pointer">
+                      reviews out of 7897 ratings
+                    </span>
                   </div>
 
                   <div className="mt-44 flex flex-col justify-center items-center font-mono ">

@@ -12,8 +12,11 @@ const CartItems = ({ id, image, price, name, qty, changeQty, deleteItem }) => {
       </div>
       <div className="flex  justify-center w-full">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <div className="text-xl font-semibold">{name}</div>
-          <div>price:${price}</div>
+          <div className="text-xl font-bold">{name}</div>
+          <div>
+            <span className="font-semibold capitalize text-lg">price:</span>$
+            {price}
+          </div>
 
           <div className="flex justify-center gap-4 items-center">
             <div>
